@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "live-reload": "ionic cap run android -l --external"
+    "android-live-reload": "ionic cap run android -l --external"
   },
   "dependencies": {
     "@capacitor/android": "4.4.0",
@@ -16,6 +16,7 @@
     "@capacitor/core": "4.4.0",
     "@capacitor/haptics": "4.0.1",
     "@capacitor/keyboard": "4.0.1",
+    "@capacitor/local-notifications": "^4.1.2",
     "@capacitor/push-notifications": "^4.1.1",
     "@capacitor/status-bar": "4.0.1",
     "@ionic/vue": "^6.0.0",
