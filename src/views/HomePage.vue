@@ -1,27 +1,26 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
+  <ion-menu content-id="main-content">
+    <ion-header>
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Menu Content</ion-title>
       </ion-toolbar>
     </ion-header>
-
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <h1>dddddd</h1>
-      </div>
-    </ion-content>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  <ion-page id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> 내용 채우기ㄴㄴ</ion-content>
   </ion-page>
 </template>
-
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/vue";
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenuButton } from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -32,6 +31,8 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
+    IonButtons,
+    IonMenuButton,
   },
 });
 </script>
