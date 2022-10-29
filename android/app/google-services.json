@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "840193369886",
-    "project_id": "maxgunapp",
-    "storage_bucket": "maxgunapp.appspot.com"
+    "project_number": "1009227330529",
+    "project_id": "maxgun-app",
+    "storage_bucket": "maxgun-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:840193369886:android:6193fb81d84e795339cb0f",
+        "mobilesdk_app_id": "1:1009227330529:android:53bbc7ac8f31dcc746d8a0",
         "android_client_info": {
           "package_name": "com.maxgun.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "840193369886-91tgq472va3u7llbl9a84dtai1g80201.apps.googleusercontent.com",
+          "client_id": "1009227330529-nubcdo43kj0g3okcl747nh878vd0t4u3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyADWbi41XjGbUJw04I8oTLuIJKv3CAtK04"
+          "current_key": "AIzaSyBsD-1DZFP9WWzb4EQj5O6dcHvHlbQ_jyY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "840193369886-91tgq472va3u7llbl9a84dtai1g80201.apps.googleusercontent.com",
+              "client_id": "1009227330529-nubcdo43kj0g3okcl747nh878vd0t4u3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
