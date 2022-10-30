@@ -16,12 +16,12 @@
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding"> 내용 채우기ㄴㄴ</ion-content>
+    <ion-content class="ion-padding"> 내용 </ion-content>
   </ion-page>
 </template>
 <script lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenuButton } from "@ionic/vue";
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 
 export default defineComponent({
   name: "HomePage",
@@ -33,6 +33,11 @@ export default defineComponent({
     IonToolbar,
     IonButtons,
     IonMenuButton,
+  },
+  setup() {
+    onMounted(() => {
+      alert(1);
+    });
   },
 });
 </script>
