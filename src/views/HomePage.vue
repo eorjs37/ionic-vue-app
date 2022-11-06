@@ -1,26 +1,17 @@
 <template>
-  <ion-menu content-id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
-  </ion-menu>
   <ion-page id="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding"> 내용 </ion-content>
+    <ion-content class="ion-padding">
+      <h1>center</h1>
+    </ion-content>
   </ion-page>
 </template>
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenuButton } from "@ionic/vue";
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/vue";
 import { defineComponent, onMounted } from "vue";
 
 export default defineComponent({
@@ -31,12 +22,10 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
-    IonButtons,
-    IonMenuButton,
   },
   setup() {
     onMounted(() => {
-      alert(1);
+      console.log("1");
     });
   },
 });
