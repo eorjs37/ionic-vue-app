@@ -1,19 +1,19 @@
 <template>
-  <ion-app>
-    <ion-tabs>
+  <ion-app v-if="tabAbleed !== -1">
+    <ion-tabs ref="carrotTab">
       <ion-router-outlet />
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="Tab1Page">
-          <ion-icon :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
+        <ion-tab-button tab="Tab1Page" :selected="tabAbleed === 1" @click="tabAbleed = 1">
+          <ion-icon :icon="list" />
+          <ion-label>목록</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab2" selected>
+        <ion-tab-button tab="tab2" :selected="tabAbleed === 2" @click="tabAbleed = 2">
           <ion-icon :icon="ellipse" />
           <ion-label>Tab 2</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab3">
+        <ion-tab-button tab="tab3" :selected="tabAbleed === 3" @click="tabAbleed = 3">
           <ion-icon :icon="square" />
           <ion-label>Tab 3</ion-label>
         </ion-tab-button>
@@ -24,9 +24,19 @@
 
 <script lang="ts">
 import { IonApp, IonRouterOutlet, IonLabel, IonIcon, IonTabBar, IonTabButton, IonTabs } from "@ionic/vue";
-import { defineComponent, onMounted } from "vue";
+import { defineComponent, nextTick, onMounted, ref } from "vue";
 import { PushNotifications } from "@capacitor/push-notifications";
-import { ellipse, square, triangle } from "ionicons/icons";
+import { ellipse, square, list } from "ionicons/icons";
+
+const tabObject = () => {
+  const tabAbleed = ref(-1);
+  const carrotTab = ref(null);
+
+  return {
+    tabAbleed,
+    carrotTab,
+  };
+};
 
 export default defineComponent({
   name: "App",
@@ -40,8 +50,16 @@ export default defineComponent({
     IonTabButton,
   },
   setup() {
+    const { carrotTab, tabAbleed } = tabObject();
     onMounted(() => {
       console.log("onMounted");
+
+      console.log("carrotTab : ", carrotTab.value);
+
+      nextTick(() => {
+        tabAbleed.value = 1;
+      });
+
       registerNotifications();
       addListeners();
     });
@@ -84,7 +102,9 @@ export default defineComponent({
       registerNotifications,
       ellipse,
       square,
-      triangle,
+      list,
+      carrotTab,
+      tabAbleed,
     };
   },
 });
