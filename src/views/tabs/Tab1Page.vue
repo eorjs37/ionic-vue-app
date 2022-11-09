@@ -2,11 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>tab1</ion-title>
+        <ion-title>목록</ion-title>
       </ion-toolbar>
     </ion-header>
 
-    <ion-content class="ion-padding">tab1 Tab</ion-content>
+    <ion-content class="ion-padding">tab1 Tab11</ion-content>
   </ion-page>
 </template>
 

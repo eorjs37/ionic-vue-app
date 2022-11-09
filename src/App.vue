@@ -1,14 +1,14 @@
 <template>
-  <ion-app v-if="tabAbleed !== -1">
+  <ion-app>
     <ion-tabs ref="carrotTab">
       <ion-router-outlet />
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="Tab1Page" :selected="tabAbleed === 1" @click="tabAbleed = 1">
+        <ion-tab-button tab="tab1" href="/tab1" :selected="tabAbleed === 1">
           <ion-icon :icon="list" />
           <ion-label>목록</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab2" :selected="tabAbleed === 2" @click="tabAbleed = 2">
+        <ion-tab-button tab="tab2" href="/tab2" :selected="tabAbleed === 2">
           <ion-icon :icon="ellipse" />
           <ion-label>Tab 2</ion-label>
         </ion-tab-button>
@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { IonApp, IonRouterOutlet, IonLabel, IonIcon, IonTabBar, IonTabButton, IonTabs } from "@ionic/vue";
-import { defineComponent, nextTick, onMounted, ref } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import { PushNotifications } from "@capacitor/push-notifications";
 import { ellipse, square, list } from "ionicons/icons";
 
@@ -55,13 +55,10 @@ export default defineComponent({
       console.log("onMounted");
 
       console.log("carrotTab : ", carrotTab.value);
+      tabAbleed.value = 1;
 
-      nextTick(() => {
-        tabAbleed.value = 1;
-      });
-
-      registerNotifications();
-      addListeners();
+      // registerNotifications();
+      // addListeners();
     });
 
     const addListeners = async () => {
