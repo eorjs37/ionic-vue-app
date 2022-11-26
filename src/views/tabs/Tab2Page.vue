@@ -30,9 +30,7 @@ export default {
   setup() {
     const router = useRouter();
     const back = () => {
-      console.log(router.getRoutes());
-
-      //router.back();
+      router.back();
     };
     return {
       back,
