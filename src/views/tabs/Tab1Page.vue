@@ -9,7 +9,9 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content class="ion-padding"> </ion-content>
+    <ion-content class="ion-padding">
+      <Banner></Banner>
+    </ion-content>
   </ion-page>
 </template>
 
@@ -17,6 +19,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton, useBackButton } from "@ionic/vue";
 
 import { presentAlert } from "@/utils/alert";
+import Banner from "@/components/Banner.vue";
 export default {
   components: {
     IonContent,
@@ -26,6 +29,7 @@ export default {
     IonToolbar,
     IonButtons,
     IonBackButton,
+    Banner,
   },
   setup() {
     const back = async () => {
