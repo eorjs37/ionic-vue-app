@@ -1,15 +1,15 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="carrot">
         <ion-buttons slot="start">
           <ion-back-button default-href="#" @click="back()" color="primary"></ion-back-button>
         </ion-buttons>
-        <ion-title>Tab1</ion-title>
+        <ion-title color="light">Tab2</ion-title>
       </ion-toolbar>
     </ion-header>
 
-    <ion-content class="ion-padding">
+    <ion-content :fullscreen="true">
       <Banner></Banner>
     </ion-content>
   </ion-page>

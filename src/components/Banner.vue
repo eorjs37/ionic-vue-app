@@ -1,13 +1,13 @@
 <template>
-  <swiper :modules="modules" :loop="true" :autoplay="autoplay" :height="200">
+  <swiper :modules="modules" :loop="true" :slides-per-view="'auto'" :autoplay="autoplay" :auto-height="true" :space-between="0">
     <swiper-slide>
-      <img src="../../public/assets/imgs/banner/slide1.jpg" alt="" />
+      <img class="banner-img" src="../../public/assets/imgs/banner/slide1.jpg" alt="" />
     </swiper-slide>
     <swiper-slide>
-      <img src="../../public/assets/imgs/banner/slider2.jpg" alt="" />
+      <img class="banner-img" src="../../public/assets/imgs/banner/slider2.jpg" alt="" />
     </swiper-slide>
     <swiper-slide>
-      <img src="../../public/assets/imgs/banner/slider3.jpg" alt="" />
+      <img class="banner-img" src="../../public/assets/imgs/banner/slider3.jpg" alt="" />
     </swiper-slide>
   </swiper>
 </template>
@@ -27,7 +27,7 @@ export default defineComponent({
     let autoplay = {};
     onMounted(() => {
       autoplay = {
-        delay: 3000,
+        delay: 7000,
         reverseDirection: false,
       };
     });
@@ -38,4 +38,8 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.banner-img {
+  width: 100% !important;
+}
+</style>
