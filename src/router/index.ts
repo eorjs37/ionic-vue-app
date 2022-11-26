@@ -21,6 +21,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/tab2",
     component: () => import("@/views/tabs/Tab2Page.vue"),
   },
+  {
+    path: "/tab3",
+    component: () => import("@/views/tabs/Tab3Page.vue"),
+  },
 ];
 
 const router = createRouter({
